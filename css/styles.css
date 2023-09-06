@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cinzel", serif;
+}
+/*Основной контейнер с flex-распределением*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* .left-column{
+    flex-basis: 40%;
+} */
+
+.right-column {
+  flex-basis: 55%;
+  background-image: url(../asetts/images/section.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Фоновое изображение на полной высоте с экраном*/
+.background-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../asetts/images/kart.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*Стили для обзацев*/
+p {
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(2, 2, 23);
+}
+
+/*Навигационное меню с flex-распределением и стилями*/
+ё nav {
+  height: 65px;
+  width: 100%;
+  /* margin: ; */
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Стили для изображения в навигационном меню*/
+img {
+  width: 130px;
+  height: 40px;
+  margin-top: 18px;
+}
+
+/*Стили для внутреннего контейнера навигационного меню*/
+.nav__inner {
+  width: 1052px;
+  height: 84px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
+}
+
+/*Стили для списка элементов навигационного меню*/
+.nav__inner_list {
+  width: 594px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*Стили для элементо текста и кнопок*/
+.nav__inner_list p {
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.nav__inner_list button {
+  width: 142px;
+  height: 40px;
+  background-color: white;
+  color: rgb(19, 14, 14);
+  border: 1px solid rgb(15, 14, 15);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: ease 0.3s;
+}
+
+/*Стили для наведения курсора на элемениы списка и кнопки*/
+.nav__inner_list p:hover,
+.nav__inner_list button:hover {
+  background-color: rgb(27, 27, 36);
+  color: rgb(62, 103, 119);
+  transform: scale(1.1);
+  border-radius: 3px;
+}
+
+/*Стили для центрированного текста*/
+.centered-text {
+  margin-top: 190px;
+  margin-left: 210px;
+  font-size: 35px;
+}
+
+/*Стили для текста с оранжевой полосой*/
+.some-text {
+  color: black;
+}
+
+.some-text::after {
+  content: "";
+  display: inline-block;
+  width: 115px;
+  height: 2px;
+  background-color: orange;
+  margin-left: 5px;
+}
+
+/*Стили для кнопки*/
+.learn-more-button {
+  background-color: rgb(223, 211, 226);
+  color: #141111;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: rgb(16, 10, 17);
+  border: 1px solid rgb(15, 14, 16);
+  color: skyblue;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.background-image-2 {
+  width: 100%;
+}
+
+.background-image-2 p {
+  color: #f4e8e8;
+  font-size: 25px;
+  padding-left: 220px;
+  line-height: 1.5;
+  text-align: center;
+  text-align: justify;
+
+  padding-top: 223px;
+}
+
+.transparent-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 720px;
+
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transparent-box p {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  text-align: center;
+  padding: 24px;
+  margin: 14px;
+  background-color: rgba(229, 216, 216, 0.7);
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+}
+.header,
+.footer {
+  padding: 20px;
+  background-color: rgb(18, 18, 44);
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.text small {
+  font-style: Cinzel;
+  color: #333;
+  margin-right: 199px;
+  display: block;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ----------------------------pain ends------------------------------ */
+
+/* Адаптив для навигационного меню */
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+  }
+  nav img {
+    display: block;
+    margin: 0 auto;
+  }
+  nav p {
+    margin: 10px 0;
+  }
+  nav button {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+/* Адаптив для основного контента */
+@media (max-width: 768px) {
+  .centered-text {
+    text-align: center;
+  }
+  .some-text p {
+    text-align: center;
+  }
+  .learn-more-button {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+/* Адаптив для сайдбара */
+@media (max-width: 768px) {
+  aside .transparent-box {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  aside .block {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+/* Адаптив для подвала */
+@media (max-width: 768px) {
+  .footer-text {
+    text-align: center;
+  }
+  .footer-text p {
+    margin: 10px 0;
+  }
+}
+
+/* Адаптив для заголовка и текста */
+@media (max-width: 768px) {
+  .title {
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+  }
+}
+
+/* Адаптив для контактной информации в подвале */
+@media (max-width: 768px) {
+  .contact-info p {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* Адаптив для текста в подвале */
+@media (max-width: 768px) {
+  .footer-text {
+    text-align: center;
+  }
+  .footer-text p {
+    margin: 10px 0;
+  }
+}
